@@ -32,8 +32,7 @@ export const actions = {
             return fail(400, { password: 'Mismatch', error: 'Passwords do not match' });
         }
 
-        const hashedPassword = bcrypt.hash(password,10);
-        const body = await api.post('users/register', { username, hashedPassword });
+        const body = await api.post('users/register', { username, password });
 
         if (body.errors) {
             return fail(401, body);
