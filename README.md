@@ -1,6 +1,6 @@
 # Secure-Web-Dev Front End
 
-Front-end school work to implement a given back-end [back-end](https://github.com/celiune/secure-web-dev-backend).
+Front-end school work to implement a given [back-end](https://github.com/celiune/secure-web-dev-backend).
 This backend connects to a MongoDB Database containing locations of film sets in Paris, France.
 Consulting locations requires an account. Creating, updating and deleting locations requires elevated privileges.
 There are 2 access level: `user` and `admin`. Each user have a `role` property to store this data.
