@@ -114,11 +114,7 @@ button:hover {
     border: 1px solid #33ccff;
 }
 
-form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 15px;
-}
+
 form .message a {
   color: #ff99cc;
   text-decoration: none;
@@ -130,7 +126,7 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th {
   padding: 8px;
   text-align: left;
 }
@@ -152,10 +148,7 @@ th, td {
   text-decoration: none;
 }
 
-.pagination a.active {
-  background-color: blue;
-  color: white;
-}
+
 
 
 </style>
