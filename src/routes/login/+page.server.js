@@ -8,37 +8,30 @@ export async function load({ locals }) {
 
 /** @type {import('./$types').Actions} */
 export const actions = {
-	login: async ({ cookies, request }) => {
+	login: async ({ cookies, request, locals }) => {
 		const data = await request.formData();
 		const username = data.get('username');
 		const password = data.get('password');
 
 		if (!username) { 
-            return fail ( 400, { username: 'Missing', error: 'Username is required' });
+            return fail ( 400, { missing:true, error: 'Username is required' });
         }
           
         if (!password) {
-            return fail ( 400, { password: 'Missing', error: 'Password is required' });
+            return fail ( 400, { missing:true, error: 'Password is required' });
         }
-        
-		const body = await api.post('users/login', { username, password });
 
-        if (!body.result) {
-            return fail(401, { error: 'Login failed, please try again' });
-        }        
+		const body = await api.post('users/login', {username,password});
 
-		if (body.errors) {
-			return fail(401, body);
-		}
-
+        if (!body.ok) {
+            return fail(401, { incorrect:true, error: 'Login failed, please try again' });
+        }
 		else {
 			const value = body.result.jwt
 			cookies.set('jwt', value, { path: '/' });
-			return { success: true };
+			locals.user = body.result
+			return { success: true, ...body, username};
 		}
 	},
 
-	register: async (event) => {
-		// TODO register the user
-	}
 };
