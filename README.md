@@ -35,4 +35,4 @@ Once you've created a project and installed dependencies with npm install (or pn
 
 :heavy_check_mark: US6: As an “admin" user, I want to see a button to delete locations in the array of locations so that I can delete existing locations
 
-The last US6 is half done, there is a button to delete locations in the array of locations but every button in the page only delete the first location of the page, so to delete the location you want, you need to first click on the location with "More details" and then you have button delete which will delete it.
+:x: The last US6 is half done, there is a button to delete locations in the array of locations but every button in the page only delete the first location of the page, so to delete the location you want, you need to first click on the location with "More details" and then you have button delete which will delete it.
