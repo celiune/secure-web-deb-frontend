@@ -64,38 +64,6 @@
 </nav>
 
 <style>
-	
-/* .navbar .nav-item {
-  display: inline-block;
-  margin-left: 10px;
-  height: 50px; /* adjust the height of the li element 
-}
-
-nav {
-  border-bottom: 1px solid #dee2e6;
-  position: relative; 
-  top: -1px; 
-}
-
-
-.navbar-brand {
-  font-size: 24px;
-  font-weight: bold;
-  color: #343a40;
-  text-align: left;
-}
-
-.nav-link {
-  color: #343a40;
-  font-size: 18px;
-  margin-right: 20px;
-  text-align: center;
-  display: inline-block;
-}
-
-.navbar-nav {
-  float: right;
-} */
 
 .navbar-brand {
   font-weight: bold;
